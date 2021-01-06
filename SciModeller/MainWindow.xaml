@@ -1,0 +1,54 @@
+﻿<Window x:Class="NatkModelleren.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        Background="#1C1C1C"
+        mc:Ignorable="d"
+        Title="SciModeller by Koen Caspers" Height="450" Width="800"
+        MinHeight="450" MinWidth="700">
+    <Grid Name="Grid1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <WpfPlot Name="wpfPlot1" Grid.Column="2" Grid.RowSpan="2">
+        </WpfPlot>
+        
+        <TextBox x:Name="formulas1" Grid.Column="0" AcceptsReturn="True" VerticalContentAlignment="Top"/>
+        <TextBox x:Name="variables1" Grid.Column="1" AcceptsReturn="True" VerticalContentAlignment="Top"/>
+
+        <StackPanel Grid.Row="1" Margin="8">
+            <CheckBox Content="Advanced Mode" IsEnabled="True" x:Name="AdvancedToggle" Click="AdvancedToggle_Click" Margin="0 0 0 10"/>
+            <Grid x:Name="variableBox" IsEnabled="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="Rvar" Grid.Column="1" hc:InfoElement.Placeholder="Variable" hc:InfoElement.Necessary="True" Style="{StaticResource TextBoxExtend}" IsEnabled="False"/>
+                <hc:NumericUpDown DecimalPlaces="2" x:Name="SampleRateBox" Value="1"/>
+            </Grid>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="8">
+            <Button Click="Button_Click" HorizontalAlignment="Stretch" Style="{StaticResource ButtonPrimary}">Execute</Button>
+            <Grid Margin="0 5 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Save" Margin="0 0 2 0" Click="Save_Button_Click" HorizontalAlignment="Stretch"/>
+                <Button Content="Open" Grid.Column="1" Margin="2 0 0 0" Click="Open_Button_Click" HorizontalAlignment="Stretch"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
