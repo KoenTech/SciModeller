@@ -43,7 +43,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][https://i.ibb.co/JmnnWXy/main-small.png]](https://example.com) -->
+![SciModeller](images/main.png)
 
 SciModeller is an easy-to-use application to plot charts from formulas. It now also supports saving/opening of models. SciModeller uses Python to plot the charts. SciModeller is written in C#.
 
