@@ -50,7 +50,7 @@ SciModeller is an easy-to-use application to plot charts from formulas. It now a
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Libraries used in this project:
 * [Scottplot](https://github.com/swharden/ScottPlot)
 * [IronPython](https://ironpython.net/)
 * [HandyControl](https://github.com/HandyOrg/HandyControl)
